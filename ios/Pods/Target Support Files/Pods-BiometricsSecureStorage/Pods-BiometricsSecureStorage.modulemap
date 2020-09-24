@@ -1,0 +1,6 @@
+framework module Pods_BiometricsSecureStorage {
+  umbrella header "Pods-BiometricsSecureStorage-umbrella.h"
+
+  export *
+  module * { export * }
+}

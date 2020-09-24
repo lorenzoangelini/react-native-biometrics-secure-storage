@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-
-		F4FF95D7245B92E800C19C63 /*  BiometricsSecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  BiometricsSecureStorage.swift */; };
-
-		5E555C0D2413F4C50049A1A2 /* BiometricsSecureStorage.mm in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* BiometricsSecureStorage.mm */; };
+		2D49435E251CE079009A3EA4 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D49435D251CE079009A3EA4 /* KeychainHelper.swift */; };
+		2D494364251CE22B009A3EA4 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D494363251CE22B009A3EA4 /* Device.swift */; };
+		2D494366251CE245009A3EA4 /* BiometryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D494365251CE245009A3EA4 /* BiometryState.swift */; };
+		2D494368251CE281009A3EA4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D494367251CE281009A3EA4 /* String.swift */; };
+		F4FEDCEDEC24765CCDDD1732 /* Pods_BiometricsSecureStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7256B063CD304BE4AFBDCFE /* Pods_BiometricsSecureStorage.framework */; };
+		F4FF95D7245B92E800C19C63 /* BiometricsSecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* BiometricsSecureStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,12 +29,16 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libBiometricsSecureStorage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBiometricsSecureStorage.a; sourceTree = BUILT_PRODUCTS_DIR; };
-
-
+		2D49435D251CE079009A3EA4 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		2D494363251CE22B009A3EA4 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		2D494365251CE245009A3EA4 /* BiometryState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometryState.swift; sourceTree = "<group>"; };
+		2D494367251CE281009A3EA4 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		6DD56BA9896791271CB98C98 /* Pods-BiometricsSecureStorage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiometricsSecureStorage.release.xcconfig"; path = "Target Support Files/Pods-BiometricsSecureStorage/Pods-BiometricsSecureStorage.release.xcconfig"; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* BiometricsSecureStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiometricsSecureStorage.m; sourceTree = "<group>"; };
+		C7256B063CD304BE4AFBDCFE /* Pods_BiometricsSecureStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BiometricsSecureStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA4752311F14FED9EE44DCB /* Pods-BiometricsSecureStorage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiometricsSecureStorage.debug.xcconfig"; path = "Target Support Files/Pods-BiometricsSecureStorage/Pods-BiometricsSecureStorage.debug.xcconfig"; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* BiometricsSecureStorage-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BiometricsSecureStorage-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* BiometricsSecureStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricsSecureStorage.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4FEDCEDEC24765CCDDD1732 /* Pods_BiometricsSecureStorage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,17 +61,53 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		2D494361251CE203009A3EA4 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				2D494363251CE22B009A3EA4 /* Device.swift */,
+				2D494365251CE245009A3EA4 /* BiometryState.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		2D494362251CE214009A3EA4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2D494367251CE281009A3EA4 /* String.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-
-
+				2D494362251CE214009A3EA4 /* Extension */,
+				2D494361251CE203009A3EA4 /* Enum */,
+				2D49435D251CE079009A3EA4 /* KeychainHelper.swift */,
 				F4FF95D6245B92E800C19C63 /* BiometricsSecureStorage.swift */,
 				B3E7B5891CC2AC0600A0062D /* BiometricsSecureStorage.m */,
 				F4FF95D5245B92E700C19C63 /* BiometricsSecureStorage-Bridging-Header.h */,
-
 				134814211AA4EA7D00B7C361 /* Products */,
+				A65373FF823521F47B3F1A8F /* Pods */,
+				917D32858C7C326E6FCFAB68 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		917D32858C7C326E6FCFAB68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7256B063CD304BE4AFBDCFE /* Pods_BiometricsSecureStorage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A65373FF823521F47B3F1A8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDA4752311F14FED9EE44DCB /* Pods-BiometricsSecureStorage.debug.xcconfig */,
+				6DD56BA9896791271CB98C98 /* Pods-BiometricsSecureStorage.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -75,6 +117,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "BiometricsSecureStorage" */;
 			buildPhases = (
+				DADAB2DA7C0BEF10C0F0A757 /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
@@ -120,16 +163,41 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DADAB2DA7C0BEF10C0F0A757 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BiometricsSecureStorage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-
+				2D494364251CE22B009A3EA4 /* Device.swift in Sources */,
 				F4FF95D7245B92E800C19C63 /* BiometricsSecureStorage.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* BiometricsSecureStorage.m in Sources */,
-
+				2D494368251CE281009A3EA4 /* String.swift in Sources */,
+				2D494366251CE245009A3EA4 /* BiometryState.swift in Sources */,
+				2D49435E251CE079009A3EA4 /* KeychainHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +299,7 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDA4752311F14FED9EE44DCB /* Pods-BiometricsSecureStorage.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -242,16 +311,15 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = BiometricsSecureStorage;
 				SKIP_INSTALL = YES;
-
 				SWIFT_OBJC_BRIDGING_HEADER = "BiometricsSecureStorage-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-
 			};
 			name = Debug;
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DD56BA9896791271CB98C98 /* Pods-BiometricsSecureStorage.release.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -263,10 +331,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = BiometricsSecureStorage;
 				SKIP_INSTALL = YES;
-
 				SWIFT_OBJC_BRIDGING_HEADER = "BiometricsSecureStorage-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-
 			};
 			name = Release;
 		};

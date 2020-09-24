@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+enum BiometryState: CustomStringConvertible {
+       case available, locked, notAvailable
+       
+       var description: String {
+           switch self {
+           case .available:
+               return "available"
+           case .locked:
+               return "locked (temporarily)"
+           case .notAvailable:
+               return "notAvailable (turned off/not enrolled)"
+           }
+       }
+   }
