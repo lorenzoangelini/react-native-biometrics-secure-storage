@@ -1,0 +1,36 @@
+package com.reactnativebiometricssecurestorage.tasks
+
+import android.os.AsyncTask
+import android.os.Build
+import android.util.Log
+import androidx.annotation.RequiresApi
+import com.facebook.react.bridge.Promise
+import com.reactnativebiometricssecurestorage.SecureDataHandler
+
+@RequiresApi(api = Build.VERSION_CODES.M)
+class EncryptFileTask(promise: Promise, data: String, filePath: String) : AsyncTask<Void?, Void?, Void?>() {
+  private val promise: Promise
+  private val data: String
+  private val filePath: String
+  protected fun doInBackground(vararg voids: Void?): Void? {
+    val startTime: Long = java.lang.System.currentTimeMillis()
+    try {
+      SecureDataHandler.getInstance().encryptAndSaveDataToFile(filePath, data)
+      Log.d("[SecureAuthModule]", String.format("Data for filePath %s encrypted successfully", filePath))
+      promise.resolve(null)
+    } catch (e: java.lang.Exception) {
+      Log.e("[SecureAuthModule]", e.message, e)
+      promise.reject(e)
+    } finally {
+      val stopTime: Long = java.lang.System.currentTimeMillis()
+      Log.d("[SecureAuthModule]", String.format("Encryption required %f", (stopTime.toDouble() - startTime) / 1000))
+    }
+    return null
+  }
+
+  init {
+    this.promise = promise
+    this.data = data
+    this.filePath = filePath
+  }
+}
