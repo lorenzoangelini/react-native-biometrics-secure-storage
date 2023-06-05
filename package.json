@@ -1,6 +1,6 @@
 {
   "name": "react-native-biometrics-secure-storage",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A module that allow to save securely your data",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
